@@ -84,8 +84,8 @@ module double_adder(
 
       unpack:
       begin
-        a_m <= {a[51 : 0], 3'd0};
-        b_m <= {b[51 : 0], 3'd0};
+        a_m <= {a[51 : 0], 3'd0}; // a_m <= {1'd1,a[51 : 0], 2'd0}
+        b_m <= {b[51 : 0], 3'd0}; // b_m <= {1'd1,b[51 : 0], 2'd0};  For the hidden 1 notation 
         a_e <= a[62 : 52] - 1023;
         b_e <= b[62 : 52] - 1023;
         a_s <= a[63];
